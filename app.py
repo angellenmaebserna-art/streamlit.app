@@ -27,7 +27,7 @@ import pandas as pd
 # Ensure necessary dataFrames are available
 if 'yearly_microplastic' not in locals():
     # Load the dataset
-    df = pd.read_csv('streamlit-app/merged_microplastic_data.csv')
+    df = pd.read_csv('merged_microplastic_data.csv')
     # Assuming df is available, aggregate yearly data
     yearly_microplastic = df.groupby('Year')['Microplastic_Level'].mean().reset_index()
 
