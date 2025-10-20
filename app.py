@@ -124,7 +124,7 @@ section[data-testid="stSidebar"] {
 st.sidebar.title("Select Dataset")
 
 csv_files = [
-    "all_dataset_csv_file/merged_microplastic_data.csv"
+    "streamlit.app/merged_microplastic_data.csv"
 ]
 
 datasets = {}
@@ -137,7 +137,7 @@ for file in csv_files:
         st.warning(f"⚠️ File not found: {file}")
 
 selected_dataset = st.sidebar.selectbox("Select Dataset / Place", list(datasets.keys()))
-df = datasets["streamlit.app/merged_microplastic_data.csv"]
+df = datasets[selected_dataset]
 
 lat_col, lon_col = None, None
 for col in df.columns:
